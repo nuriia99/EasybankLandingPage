@@ -1,0 +1,32 @@
+.header{
+    padding: 24px;
+
+    &-menu{
+        > span{
+            display: block;
+            height: 3px;
+            width: 26px;
+            background-color: $DarkBlue;
+
+            &:not(:last-child){
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    &-links{
+        > a{
+            font-weight: 300;
+              margin-right: 32px;
+        }
+        
+    }
+    .cta{
+        cursor: pointer;
+        font-weight: 400;
+        color: $White;
+        padding: 0.875rem 2.125rem;
+        border-radius: 3.125rem;
+        background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+    }
+}
