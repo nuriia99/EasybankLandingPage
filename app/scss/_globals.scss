@@ -15,6 +15,10 @@ body{
    font-size: $font-size-m;
    font-weight: 300;
    color: $GrayishBlue;
+
+   &.noscroll{
+    overflow: hidden;
+   }
 }
 
 //a
