@@ -1,10 +1,10 @@
 .header{
-    background-color: $White;
+    background: $White;
 
     &.open{
         .overlay{
             display: block;
-            background: linear-gradient($DarkBlue, transparent );
+            
         }
         > span{
             &:not(:last-child){
@@ -28,7 +28,7 @@
     }
 
 
-    &-logo{
+    &-logo &-logo:hover{
         font-size: 0rem;
         > img {
             height: 20px;
@@ -122,12 +122,13 @@
 }
 
 .overlay{
+    opacity: 0;
     position: fixed;
     top: 3.375rem;
     bottom: 0;
     left: 0;
     right: 0;
-    
+    background: linear-gradient($DarkBlue, transparent );
 }
 
 nav{

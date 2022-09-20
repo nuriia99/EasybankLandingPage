@@ -27,3 +27,13 @@ btnHam.addEventListener('click', ()=>{
     }
 });
 
+visualViewport.onresize = () => {
+    if(window.innerWidth > 1023){
+        header.classList.remove("open");
+        fadeElements.forEach((element)=>{
+            element.classList.add("fade-out");
+            element.classList.remove("fade-in");
+         });
+    }
+  };
+
