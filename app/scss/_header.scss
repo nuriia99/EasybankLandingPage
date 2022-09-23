@@ -1,5 +1,8 @@
 .header{
     background: $White;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 
     &.open{
         .overlay{
@@ -103,6 +106,7 @@
     }
 
     &-menu{
+        z-index: 1;
         background: $White;
         margin: 1.5rem;
         margin-bottom: 0;

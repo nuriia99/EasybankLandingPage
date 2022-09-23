@@ -127,6 +127,9 @@ a, a:visited, a:hover {
 
 .header {
   background: hsl(0deg, 0%, 100%);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 .header.open .overlay {
   display: block;
@@ -200,6 +203,7 @@ a, a:visited, a:hover {
   opacity: 75%;
 }
 .header-menu {
+  z-index: 1;
   background: hsl(0deg, 0%, 100%);
   margin: 1.5rem;
   margin-bottom: 0;
@@ -233,7 +237,11 @@ nav {
   padding-bottom: 1.0625rem;
 }
 
-.product-image {
+.hero {
+  position: relative;
+  top: 30px;
+}
+.hero-image {
   position: relative;
   padding: 0;
   min-height: 16.25rem;
@@ -242,7 +250,7 @@ nav {
   background-position: center center;
   background-size: cover;
 }
-.product-image::before {
+.hero-image::before {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -252,5 +260,41 @@ nav {
   background-image: url("../../images/image-mockups.png");
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 92%;
+  background-size: 87%;
+}
+.hero-text {
+  padding: 30px;
+  text-align: center;
+  display: block;
+}
+.hero-text h2 {
+  margin: 0;
+  color: hsl(233deg, 26%, 24%);
+  font-weight: 400;
+  font-size: 35px;
+}
+.hero-text p {
+  padding-top: 25px;
+  margin: 0;
+  font-size: 13px;
+}
+.hero-text .container {
+  padding: 30px 0 50px 0;
+}
+.hero-text .container .button {
+  padding: 10px 0 10px 0;
+}
+.hero-text .container .button .cta {
+  margin: 35px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.875rem 2.1875rem;
+  border-radius: 3.125rem;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  transition: opacity 300ms ease-in-out;
+}
+.hero-text .container .button .cta:hover {
+  opacity: 75%;
 }/*# sourceMappingURL=style.css.map */
