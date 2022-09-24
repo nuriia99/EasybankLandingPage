@@ -238,8 +238,7 @@ nav {
 }
 
 .hero {
-  position: relative;
-  top: 30px;
+  padding-top: 3.75rem;
 }
 .hero-image {
   position: relative;
