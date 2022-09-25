@@ -238,6 +238,7 @@ nav {
 }
 
 .hero {
+  border: 1px solid red;
   padding-top: 3.75rem;
 }
 .hero-image {
@@ -262,7 +263,7 @@ nav {
   background-size: 87%;
 }
 .hero-text {
-  padding: 30px;
+  padding: 1.875rem;
   text-align: center;
   display: block;
 }
@@ -270,21 +271,19 @@ nav {
   margin: 0;
   color: hsl(233deg, 26%, 24%);
   font-weight: 400;
-  font-size: 35px;
+  font-size: 2.1875rem;
 }
 .hero-text p {
-  padding-top: 25px;
+  padding-top: 1.5625rem;
   margin: 0;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
-.hero-text .container {
-  padding: 30px 0 50px 0;
+.hero-text .button {
+  padding-top: 1.875rem;
+  padding-bottom: 5.875rem;
 }
-.hero-text .container .button {
-  padding: 10px 0 10px 0;
-}
-.hero-text .container .button .cta {
-  margin: 35px;
+.hero-text .button .cta {
+  border-top: 6.25rem;
   cursor: pointer;
   font-weight: 400;
   font-size: 0.875rem;
@@ -294,6 +293,6 @@ nav {
   background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
   transition: opacity 300ms ease-in-out;
 }
-.hero-text .container .button .cta:hover {
+.hero-text .button .cta:hover {
   opacity: 75%;
 }/*# sourceMappingURL=style.css.map */

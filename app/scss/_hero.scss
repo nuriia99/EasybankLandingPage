@@ -1,4 +1,5 @@
 .hero{
+    border: 1px solid red;
     padding-top:3.75rem;
     &-image{
         position: relative;
@@ -25,41 +26,40 @@
     }
     &-text{
         
-        padding: 30px;
+        padding: 1.875rem;
         text-align:center;
         display: block;
         h2{
             margin: 0;
             color: $DarkBlue;
             font-weight: 400;
-            font-size: 35px;
+            font-size: 2.1875rem;
             
         }
         p{
-            padding-top: 25px;
+            padding-top: 1.5625rem;
             margin: 0;
-            font-size: 13px;
+            font-size: 0.8125rem;
         }
-        .container{
-            padding:30px 0 50px 0;
-            .button {
-                padding: 10px 0 10px 0;
-                .cta{
-                    margin: 35px;
-                    cursor: pointer;
-                    font-weight: 400;
-                    font-size: 0.875rem;
-                    color: $White;
-                    padding: 0.875rem 2.1875rem;
-                    border-radius: 3.125rem;
-                    background: linear-gradient(to right, $LimeGreen, $BrightCyan);
-                    transition: opacity 300ms ease-in-out;
-                    &:hover{
-                        opacity: 75%;
-                    }
+        .button{
+            padding-top: 1.875rem;
+            padding-bottom: 5rem + 0.875rem;
+            .cta{
+                border-top: 6.25rem;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: 0.875rem;
+                color: $White;
+                padding: 0.875rem 2.1875rem;
+                border-radius: 3.125rem;
+                background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+                transition: opacity 300ms ease-in-out;
+                &:hover{
+                    opacity: 75%;
                 }
             }
         }
+        
         
         
     }
