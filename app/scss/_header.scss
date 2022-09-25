@@ -31,10 +31,9 @@
     }
 
 
-    &-logo, &-logo:hover{
-        display: flex;
-        align-items: center;
-        min-height: 2.8875rem;
+    &-logo &-logo:hover{
+        display: block;
+
         font-size: 0rem;
         > img {
             height: 20px;
