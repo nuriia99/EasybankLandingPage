@@ -147,11 +147,13 @@ a, a:visited, a:hover {
 .header.open span:nth-child(3) {
   transform: rotate(-45deg);
 }
-.header-logo .header-logo:hover {
-  display: block;
+.header-logo, .header-logo:hover {
+  display: flex;
+  align-items: center;
+  min-height: 2.8875rem;
   font-size: 0rem;
 }
-.header-logo .header-logo:hover > img {
+.header-logo > img, .header-logo:hover > img {
   height: 20px;
   width: 134px;
 }
@@ -240,7 +242,12 @@ nav {
 
 .hero {
   border: 1px solid red;
-  padding-top: 3.3125rem;
+  padding-top: 8.125rem;
+}
+@media (min-width: 64em) {
+  .hero {
+    display: flex;
+  }
 }
 .hero-image {
   position: relative;
@@ -250,6 +257,12 @@ nav {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+@media (min-width: 64em) {
+  .hero-image {
+    flex: 1;
+    order: 2;
+  }
 }
 .hero-image::before {
   position: absolute;
@@ -267,6 +280,12 @@ nav {
   padding: 1.875rem;
   text-align: center;
   display: block;
+}
+@media (min-width: 64em) {
+  .hero-text {
+    flex: 1;
+    order: 1;
+  }
 }
 .hero-text h2 {
   margin: 0;

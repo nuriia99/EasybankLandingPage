@@ -1,7 +1,13 @@
 .hero{
     border: 1px solid red;
-    padding-top:3.3125rem;
+    padding-top:8.125rem;
+
+    @include breakpoint-up(large){
+        display:flex;
+    }
+
     &-image{
+        
         position: relative;
         padding: 0;
         min-height: 16.25rem;
@@ -9,6 +15,11 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+
+        @include breakpoint-up(large){
+            flex: 1;
+            order: 2;
+        }
 
         &::before{
             position: absolute;
@@ -25,7 +36,10 @@
         }
     }
     &-text{
-        
+        @include breakpoint-up(large){
+            flex: 1;
+            order: 1;
+        }
         padding: 1.875rem;
         text-align:center;
         display: block;
