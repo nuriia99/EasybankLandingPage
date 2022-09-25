@@ -32,6 +32,8 @@
 
 
     &-logo &-logo:hover{
+        display: block;
+
         font-size: 0rem;
         > img {
             height: 20px;
