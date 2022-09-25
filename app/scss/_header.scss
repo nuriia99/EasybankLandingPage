@@ -31,13 +31,14 @@
     }
 
 
-    &-logo &-logo:hover{
-        display: block;
-
+    &-logo, &-logo:hover{
+        display: flex;
+        align-items: center;
+        min-height: 1.5625rem;
         font-size: 0rem;
         > img {
-            height: 20px;
-            width: 134px;
+            height: 1.25rem;
+            width: 8.375rem;
         }
     }
     
