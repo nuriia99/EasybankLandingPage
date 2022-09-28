@@ -243,7 +243,6 @@ nav {
 
 .hero {
   border: 1px solid red;
-  padding-top: 3.625rem;
   background-color: hsl(0deg, 0%, 98%);
 }
 @media (min-width: 64em) {
@@ -280,9 +279,10 @@ nav {
     height: 100%;
     background-image: url("../../images/bg-intro-desktop.svg");
     background-repeat: no-repeat;
-    width: 100%;
-    background-size: 122%;
-    background-position: 0% 83%;
+    width: 195%;
+    background-size: 100%;
+    left: 50px;
+    background-position: 0% 81%;
   }
 }
 .hero-text {
@@ -294,7 +294,6 @@ nav {
   .hero-text {
     flex: 1;
     order: 1;
-    padding: 167px;
     text-align: left;
   }
 }
