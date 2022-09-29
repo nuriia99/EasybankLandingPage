@@ -122,8 +122,8 @@ a, a:visited, a:hover {
 }
 
 .container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 
 .header {
@@ -248,6 +248,7 @@ nav {
 @media (min-width: 64em) {
   .hero .container {
     margin: 0 auto;
+    margin-left: 0;
     max-width: 64rem;
     display: flex;
     align-items: center;
@@ -279,23 +280,15 @@ nav {
     height: 100%;
     background-image: url("../../images/bg-intro-desktop.svg");
     background-repeat: no-repeat;
-    width: 195%;
-    background-size: 100%;
-    left: 50px;
     background-position: 0% 81%;
+    width: 435%;
+    background-size: 99%;
+    left: 27px;
   }
 }
 .hero-text {
-  padding: 1.875rem;
   text-align: center;
   display: block;
-}
-@media (min-width: 64em) {
-  .hero-text {
-    flex: 1;
-    order: 1;
-    text-align: left;
-  }
 }
 .hero-text h2 {
   margin: 0;
@@ -308,8 +301,22 @@ nav {
   margin: 0;
   font-size: 0.8125rem;
 }
+@media (min-width: 64em) {
+  .hero-text {
+    flex: 1;
+    order: 1;
+    text-align: left;
+    min-width: 26.875rem;
+  }
+  .hero-text h2 {
+    font-size: 3.25rem;
+  }
+  .hero-text p {
+    font-size: 1.0625rem;
+  }
+}
 .hero-text .button {
-  padding-top: 1.875rem;
+  padding-top: 3.1875rem;
   padding-bottom: 5.875rem;
 }
 .hero-text .button .cta {

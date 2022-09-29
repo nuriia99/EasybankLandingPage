@@ -6,6 +6,7 @@
         
         @include breakpoint-up(large){
             margin: 0 auto;
+            margin-left: 0;
             max-width: 64rem;
             display: flex;
             align-items: center;
@@ -49,24 +50,17 @@
                 height: 100%;
                 background-image: url('../../images/bg-intro-desktop.svg'); 
                 background-repeat: no-repeat;
-                width: 195%;
-                background-size: 100%;
-                left: 50px;
                 background-position: 0% 81%;
+                width: 435%;
+                background-size: 99%;
+                left: 27px;
               }
         }
     }
     &-text{
         
-        padding: 1.875rem;
         text-align:center;
         display: block;
-
-        @include breakpoint-up(large){
-            flex: 1;
-            order: 1;
-            text-align: left;
-        }
 
         h2{
             margin: 0;
@@ -80,8 +74,26 @@
             margin: 0;
             font-size: 0.8125rem;
         }
+
+        @include breakpoint-up(large){
+            flex: 1;
+            order: 1;
+            text-align: left;
+            min-width: 26.875rem;
+            
+
+            h2{
+                font-size: 3.25rem;
+            }
+
+            p{
+                font-size: 1.0625rem;
+            }
+        }
+
+        
         .button{
-            padding-top: 1.875rem;
+            padding-top: 2.3125rem + 0.875rem;
             padding-bottom: 5rem + 0.875rem;
             .cta{
                 border-top: 6.25rem;
