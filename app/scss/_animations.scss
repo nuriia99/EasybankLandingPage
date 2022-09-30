@@ -36,3 +36,21 @@
 .fade-out{
     animation: fade-out 500ms ease-in-out forwards; 
 }
+
+@keyframes hero-image-animation{
+    0%{
+        transform: translateY(-660px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hero-text-animation{
+    0%{
+        transform: translateX(-590px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}

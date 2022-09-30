@@ -70,6 +70,39 @@
           animation: fade-out 500ms ease-in-out forwards;
 }
 
+@-webkit-keyframes hero-image-animation {
+  0% {
+    transform: translateY(-660px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hero-image-animation {
+  0% {
+    transform: translateY(-660px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes hero-text-animation {
+  0% {
+    transform: translateX(-590px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes hero-text-animation {
+  0% {
+    transform: translateX(-590px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -258,32 +291,31 @@ nav {
 .hero-image {
   position: relative;
   padding: 0;
-  min-height: 16.25rem;
   background-image: url("../../images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 17.5rem;
 }
 @media (min-width: 64em) {
   .hero-image {
     flex: 2;
     order: 2;
-    height: 41rem;
     background-image: none;
+    min-height: 660px;
+    min-width: 750px;
   }
-}
-@media (min-width: 64em) {
   .hero-image::before {
     content: "";
     position: absolute;
-    height: 100%;
     background-image: url("../../images/bg-intro-desktop.svg");
     background-repeat: no-repeat;
     background-position: 0% 81%;
-    width: 435%;
-    background-size: 99%;
+    background-size: 100%;
     left: 27px;
+    width: 150%;
+    height: 100%;
+    -webkit-animation: hero-image-animation 1.5s ease-in-out forwards;
+            animation: hero-image-animation 1.5s ease-in-out forwards;
   }
 }
 .hero-text {
@@ -307,8 +339,12 @@ nav {
     order: 1;
     text-align: left;
     min-width: 26.875rem;
+    min-height: 660px;
+    -webkit-animation: hero-text-animation 1.5s ease-in-out forwards;
+            animation: hero-text-animation 1.5s ease-in-out forwards;
   }
   .hero-text h2 {
+    padding-top: 155px;
     font-size: 3.25rem;
   }
   .hero-text p {
