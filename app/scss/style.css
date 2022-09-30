@@ -155,8 +155,14 @@ a, a:visited, a:hover {
 }
 
 .container {
-  padding-left: 160px;
-  padding-right: 160px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 64em) {
+  .container {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
 }
 
 .header {
@@ -275,8 +281,14 @@ nav {
 }
 
 .hero {
+  padding-top: 3.625rem;
   border: 1px solid red;
   background-color: hsl(0deg, 0%, 98%);
+}
+@media (min-width: 64em) {
+  .hero {
+    padding-top: 0;
+  }
 }
 @media (min-width: 64em) {
   .hero .container {
@@ -291,10 +303,25 @@ nav {
 .hero-image {
   position: relative;
   padding: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  min-height: 16.25rem;
   background-image: url("../../images/bg-intro-mobile.svg");
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
+}
+.hero-image::before {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  content: "";
+  height: 101%;
+  width: 100%;
+  background-image: url("../../images/image-mockups.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 94%;
 }
 @media (min-width: 64em) {
   .hero-image {
@@ -323,6 +350,7 @@ nav {
   display: block;
 }
 .hero-text h2 {
+  padding-top: 35px;
   margin: 0;
   color: hsl(233deg, 26%, 24%);
   font-weight: 400;

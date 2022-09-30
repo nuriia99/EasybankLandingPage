@@ -1,8 +1,12 @@
 .hero{
+    padding-top: 3.625rem;
     border: 1px solid red;
-        background-color: $VeryLightGray;
+    background-color: $VeryLightGray;
+
+    @include breakpoint-up(large){
+        padding-top: 0;
+    }
     .container{
-        
         
         @include breakpoint-up(large){
             margin: 0 auto;
@@ -17,10 +21,28 @@
     &-image{
         position: relative;
         padding: 0;
-        background-image: url('../../images/bg-intro-mobile.svg');
-        background-size: cover;
+        margin-left:-20px;
+        margin-right:-20px;
+        min-height: 16.25rem;
+        background-image: url("../../images/bg-intro-mobile.svg");
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: cover;
+
+
+        &::before{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+
+            content: "";
+            height: 101%;
+            width: 100%; 
+            background-image: url("../../images/image-mockups.png");
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: 94%;
+        }
         
         @include breakpoint-up(large){
             flex: 2;
@@ -46,32 +68,6 @@
 
         
 
-
-        // &::before{
-        //     // visibility: hidden;
-        //     // position: absolute;
-        //     // left: 50%;
-        //     // transform: translate(-50%);
-
-        //     // content: "";
-        //     // height: 100%;
-        //     // width: 100%; 
-        //     // background-image: url("../../images/image-mockups.png");
-        //     // background-repeat: no-repeat;
-        //     // background-position: center bottom;
-        //     // background-size: 94%;
-        //     @include breakpoint-up(large){
-        //         content: "";
-        //         position: absolute;
-        //         height: 100%;
-        //         background-image: url('../../images/bg-intro-desktop.svg'); 
-        //         background-repeat: no-repeat;
-        //         background-position: 0% 81%;
-        //         width: 435%;
-        //         background-size: 99%;
-        //         left: 27px;
-        //       }
-        // }
     }
     &-text{
         
@@ -79,6 +75,7 @@
         display: block;
 
         h2{
+            padding-top: 35px;
             margin: 0;
             color: $DarkBlue;
             font-weight: 400;

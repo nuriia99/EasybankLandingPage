@@ -56,8 +56,13 @@ a, a:visited, a:hover{
 
 //spacing 
 .container{
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include breakpoint-up(large){
+        padding-left: 160px;
+        padding-right: 160px;
+
+    }
 }
 
 
