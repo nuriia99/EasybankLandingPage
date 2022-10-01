@@ -21,6 +21,7 @@ const toLoadElements = document.querySelectorAll(".to-load");
 // hamburguer menu
 btnHam.addEventListener('click', ()=>{
     if(header.classList.contains("open")){
+        console.log("llego")
         body.classList.remove("noscroll");
         header.classList.remove("open");
         fadeElements.forEach((element)=>{
@@ -41,14 +42,17 @@ btnHam.addEventListener('click', ()=>{
 });
 
 visualViewport.onresize = () => {
-    if(header.classList.contains("open")){
-        body.classList.remove("noscroll");
-        header.classList.remove("open");
-        fadeElements.forEach((element)=>{
-            element.classList.add("fade-out");
-            element.classList.remove("fade-in");
-         });
-        
+    if(visualViewport.width > 1008){
+        if(header.classList.contains("open")){
+            body.classList.remove("noscroll");
+            header.classList.remove("open");
+            fadeElements.forEach((element)=>{
+                element.classList.add("fade-out");
+                element.classList.remove("fade-in");
+             });
+            
+        }
     }
+    
   };
 
