@@ -63,6 +63,10 @@ a, a:visited, a:hover{
         padding-right: 160px;
 
     }
+    @include breakpoint-up(medium){
+        padding-left: 60px;
+        padding-right: 60px;
+    }
 }
 
 

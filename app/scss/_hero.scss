@@ -3,7 +3,7 @@
     border: 1px solid red;
     background-color: $VeryLightGray;
 
-    @include breakpoint-up(large){
+    @include breakpoint-up(large and medium){
         padding-top: 0;
     }
     .container{
@@ -28,7 +28,10 @@
         background-position: center center;
         background-size: cover;
 
-
+        @include breakpoint-up(medium){
+            margin-left:-60px;
+            margin-right:-60px;
+        }
         &::before{
             position: absolute;
             left: 50%;
@@ -43,6 +46,9 @@
             background-size: 94%;
         }
         
+        @include breakpoint-up(medium){
+            min-height: 39.25rem;
+        }
         @include breakpoint-up(large){
             flex: 2;
             order: 2;

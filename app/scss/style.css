@@ -164,6 +164,12 @@ a, a:visited, a:hover {
     padding-right: 160px;
   }
 }
+@media (min-width: 31.25em) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
 
 .header {
   background: hsl(0deg, 0%, 100%);
@@ -285,7 +291,7 @@ nav {
   border: 1px solid red;
   background-color: hsl(0deg, 0%, 98%);
 }
-@media (min-width: 64em) {
+@media (min-width: 31.25em) {
   .hero {
     padding-top: 0;
   }
@@ -311,6 +317,12 @@ nav {
   background-position: center center;
   background-size: cover;
 }
+@media (min-width: 31.25em) {
+  .hero-image {
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+}
 .hero-image::before {
   position: absolute;
   left: 50%;
@@ -322,6 +334,11 @@ nav {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 94%;
+}
+@media (min-width: 31.25em) {
+  .hero-image {
+    min-height: 39.25rem;
+  }
 }
 @media (min-width: 64em) {
   .hero-image {

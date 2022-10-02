@@ -2,7 +2,7 @@
 
 }
 // 640px, 1024px, 1400px -> for every device grater than
-$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge":"87.5em");
+$breakpoints-up: ("medium": "31.25em", "large": "64em", "xlarge":"87.5em");
 //639px, 1023px, 1399px -> for every device smaller than
 $breakpoints-down: ("small":"39.9375em", "medium": "63.937em", "large": "87.4375em");
 
