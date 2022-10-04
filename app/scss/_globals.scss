@@ -56,17 +56,39 @@ a, a:visited, a:hover{
 
 //spacing 
 .container{
-    padding-left: 20px;
-    padding-right: 20px;
+    text-align:center;
+    padding-left: 23px;
+    padding-right: 23px;
+    
+    @include breakpoint-up(medium){
+        padding-left: 60px;
+        padding-right: 60px;
+    }
     @include breakpoint-up(large){
         padding-left: 160px;
         padding-right: 160px;
 
     }
-    @include breakpoint-up(medium){
-        padding-left: 60px;
-        padding-right: 60px;
-    }
+}
+
+//titles
+h2{
+    color: $DarkBlue;
+    font-weight: 400;
+    font-size: 37px;
+    line-height: 1.2;
+}
+
+h4{
+    color: $DarkBlue;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+p{
+    line-height: 1.6;
+    font-size: 18px;
 }
 
 

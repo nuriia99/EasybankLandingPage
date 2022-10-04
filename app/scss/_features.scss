@@ -1,0 +1,38 @@
+.features{
+
+    @include breakpoint-up(large and medium){
+        background-color: $LightGrayishBlue;
+        
+    }
+
+    .container{
+        @include breakpoint-up(large and medium){
+            padding-top: 111px - 24px;
+            text-align: left;
+        }
+    }
+
+    p{
+        @include breakpoint-up(large){
+            max-width: 615px;
+    
+        }
+    }
+
+    &-grid{
+        padding-top: 30px;
+        @include breakpoint-up(medium){
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 250px);
+            column-gap: 30px;
+            &-caja{
+                p{
+                    font-size: 16px;
+                }
+                width: 280px;
+            }
+        }
+        
+    }
+
+}

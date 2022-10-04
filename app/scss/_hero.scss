@@ -1,6 +1,5 @@
 .hero{
     padding-top: 3.625rem;
-    border: 1px solid red;
     background-color: $VeryLightGray;
 
     @include breakpoint-up(large and medium){
@@ -88,21 +87,19 @@
     }
     &-text{
         
-        text-align:center;
+        
         display: block;
 
         h2{
             padding-top: 35px;
             margin: 0;
-            color: $DarkBlue;
-            font-weight: 400;
-            font-size: 2.1875rem;
+            
             
         }
         p{
             padding-top: 1.5625rem;
             margin: 0;
-            font-size: 0.8125rem;
+            
         }
 
         @include breakpoint-up(large){
