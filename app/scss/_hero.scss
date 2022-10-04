@@ -2,7 +2,7 @@
     padding-top: 3.625rem;
     background-color: $VeryLightGray;
 
-    @include breakpoint-up(large and medium){
+    @include breakpoint-up(medium){
         padding-top: 0;
     }
     .container{

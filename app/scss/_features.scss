@@ -1,14 +1,19 @@
 .features{
 
-    @include breakpoint-up(large and medium){
+    @include breakpoint-up(medium){
         background-color: $LightGrayishBlue;
         
     }
 
     .container{
-        @include breakpoint-up(large and medium){
+        @include breakpoint-up(medium){
             padding-top: 111px - 24px;
             text-align: left;
+            padding-right: 0;
+        }
+        @media(max-width: 615px){
+            text-align: center;
+            padding-right: 60px;
         }
     }
 
@@ -20,16 +25,24 @@
     }
 
     &-grid{
-        padding-top: 30px;
         @include breakpoint-up(medium){
             display: grid;
-            grid-template-columns: repeat(auto-fit, 250px);
+            grid-template-columns: repeat(4, 250px);
             column-gap: 30px;
+            @media(max-width: 1270px){
+                grid-template-columns: repeat(2, 250px);
+            }
+            @media(max-width: 615px){
+                grid-template-columns: auto;
+                justify-content: center;
+            }
             &-caja{
+                padding-top: 30px;
+                width: 250px;
                 p{
                     font-size: 16px;
+                    text-align: left;
                 }
-                width: 280px;
             }
         }
         
