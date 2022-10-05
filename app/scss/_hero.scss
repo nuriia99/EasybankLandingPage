@@ -52,8 +52,8 @@
             flex: 2;
             order: 2;
             background-image: none;
-            min-height: 660px;
-            min-width: 750px;
+            min-height: 41.25rem;
+            min-width: 46.875rem;
 
             &::before{
                 content: "";
@@ -62,7 +62,7 @@
                 background-repeat: no-repeat;
                 background-position: 100% 78%;
                 background-size: 106%;
-                left: 137px;
+                left: 8.5625rem;
                 width: 150%;
                 height: 100%;
                 animation: hero-image-animation 1.5s ease-in-out forwards;
@@ -72,9 +72,9 @@
                 position: absolute;
                 background-image: url('../../images/image-mockups.png'); 
                 background-repeat: no-repeat;
-                background-position: 151% 241%;
+                background-position: 115% 241%;
                 background-size: 87%;
-                left: 92px;
+                left: 8.4375rem;
                 width: 116%;
                 height: 133%;
                 animation: hero-image-animation 1.5s ease-in-out forwards;
