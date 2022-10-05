@@ -1,34 +1,41 @@
 .features{
+    
+    background-color: $LightGrayishBlue;
 
-    @include breakpoint-up(medium){
-        background-color: $LightGrayishBlue;
-        
+    @include breakpoint-down(small){
+        h2{
+            padding-top: 3.75rem;
+        }
     }
-
+    
     .container{
+        padding-bottom: 60px;
         @include breakpoint-up(medium){
-            padding-top: 111px - 24px;
+            padding-top: 6.9375rem - 1.5rem;
             text-align: left;
             padding-right: 0;
         }
-        @media(max-width: 615px){
+        @media(min-width:500px) and (max-width: 615px){
             text-align: center;
-            padding-right: 60px;
+            padding-right: 3.75rem;
         }
     }
 
     p{
         @include breakpoint-up(large){
-            max-width: 615px;
+            max-width: 38.4375rem;
     
         }
     }
 
     &-grid{
+        &-box{
+            padding-top: 1.875rem;
+        }
         @include breakpoint-up(medium){
             display: grid;
-            grid-template-columns: repeat(4, 250px);
-            column-gap: 30px;
+            grid-template-columns: repeat(auto-fit, 250px);
+            column-gap: 1.875rem;
             @media(max-width: 1270px){
                 grid-template-columns: repeat(2, 250px);
             }
@@ -36,13 +43,14 @@
                 grid-template-columns: auto;
                 justify-content: center;
             }
-            &-caja{
-                padding-top: 30px;
-                width: 250px;
+            &-box{
+                
+                width: 15.625rem;
                 p{
-                    font-size: 16px;
+                    font-size: 1rem;
                     text-align: left;
                 }
+                
             }
         }
         
