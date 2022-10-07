@@ -308,6 +308,10 @@ p {
   color: .header-menu a darkblue;
   padding: 0.625rem;
   text-align: center;
+  transition: color 300ms ease-in-out;
+}
+.header-menu a:hover {
+  color: hsl(136deg, 65%, 51%);
 }
 
 .overlay {

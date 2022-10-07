@@ -114,6 +114,10 @@
             color: &darkblue;
             padding: 0.625rem;
             text-align: center;
+            transition: color 300ms ease-in-out;
+            &:hover{
+                color: $LimeGreen;
+            }
         }
     }
 
