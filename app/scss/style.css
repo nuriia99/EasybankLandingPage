@@ -120,10 +120,14 @@ body {
   font-size: 18px;
   font-weight: 300;
   color: hsl(233deg, 8%, 62%);
-  overflow-x: hidden;
 }
 body.noscroll {
   overflow: hidden;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a, a:visited, a:hover {

@@ -4,6 +4,8 @@ const header = document.querySelector('.header')
 const fadeElements = document.querySelectorAll('.has-fade')
 const body = document.querySelector('body')
 
+window.onbeforeunload = function(){ 	window.scrollTo(0,0); }
+
 // hamburguer menu
 btnHam.addEventListener('click', () => {
   if (header.classList.contains('open')) {

@@ -15,10 +15,15 @@ body{
    font-size: $font-size-m;
    font-weight: 300;
    color: $GrayishBlue;
-    overflow-x: hidden;
+   
    &.noscroll{
     overflow: hidden;
    }
+}
+
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 //a
