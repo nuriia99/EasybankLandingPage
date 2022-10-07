@@ -142,6 +142,39 @@ a, a:visited, a:hover {
   align-items: center;
 }
 
+a.cta {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.875rem 2.1875rem;
+  border-radius: 3.125rem;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  transition: opacity 300ms ease-in-out;
+}
+@media (max-width: 63.937em) {
+  a.cta.hide-for-mobile {
+    display: none;
+  }
+}
+a.cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 3.125rem;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+a.cta:hover::before {
+  opacity: 1;
+}
+
 @media (max-width: 63.937em) {
   .hide-for-mobile {
     display: none;
@@ -258,19 +291,6 @@ p {
 }
 .header-links > a:hover::before {
   opacity: 1;
-}
-.header .cta {
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 0.875rem;
-  color: hsl(0deg, 0%, 100%);
-  padding: 0.875rem 2.1875rem;
-  border-radius: 3.125rem;
-  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
-  transition: opacity 300ms ease-in-out;
-}
-.header .cta:hover {
-  opacity: 75%;
 }
 .header-menu {
   z-index: 1;
@@ -428,20 +448,6 @@ nav {
   padding-top: 3.1875rem;
   padding-bottom: 5.875rem;
 }
-.hero-text .button .cta {
-  border-top: 6.25rem;
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 0.875rem;
-  color: hsl(0deg, 0%, 100%);
-  padding: 0.875rem 2.1875rem;
-  border-radius: 3.125rem;
-  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
-  transition: opacity 300ms ease-in-out;
-}
-.hero-text .button .cta:hover {
-  opacity: 75%;
-}
 
 .features {
   background-color: hsl(220deg, 16%, 96%);
@@ -575,11 +581,105 @@ nav {
   font-size: 0.75rem;
 }
 .articles-grid-box h4 {
-  font-size: 18px;
+  font-size: 1.125rem;
+  transition: color 300ms ease-in-out;
+}
+.articles-grid-box h4:hover {
+  color: hsl(136deg, 65%, 51%);
 }
 .articles-grid-box img {
   border-radius: 10px 10px 0 0;
   margin: 0 -1.25rem;
   height: 200px;
   width: 255px;
+}
+
+.footer {
+  background-color: hsl(233deg, 26%, 24%);
+  padding: 40px;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .footer {
+    padding: 40px 166px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 3fr;
+    grid-auto-rows: 50px;
+    justify-items: left;
+    align-items: start;
+    grid-template-areas: "logo links1 links2 button" "social links1 links2 copyright";
+  }
+}
+.footer-logo {
+  color: white;
+  padding-bottom: 1.875rem;
+  grid-area: logo;
+  align-self: start;
+}
+.footer-social-media {
+  padding-bottom: 2.1875rem;
+  grid-area: social;
+  align-self: end;
+}
+.footer-social-media a:not(:last-child) {
+  padding-right: 0.625rem;
+}
+@media (min-width: 64em) {
+  .footer-social-media {
+    padding: 0;
+  }
+}
+.footer-links1, .footer-links2 {
+  display: flex;
+  flex-direction: column;
+  grid-area: links1;
+  justify-self: center;
+}
+.footer-links1 a, .footer-links2 a {
+  font-size: 0.75rem;
+  padding: 0.625rem 0;
+  color: hsl(0deg, 0%, 100%);
+  transition: color 300ms ease-in-out;
+}
+.footer-links1 a:hover, .footer-links2 a:hover {
+  color: hsl(136deg, 65%, 51%);
+}
+.footer-links1 a:first-child, .footer-links2 a:first-child {
+  padding-top: 0;
+}
+@media (min-width: 64em) {
+  .footer-links1, .footer-links2 {
+    align-self: center;
+  }
+  .footer-links1 a:first-child, .footer-links2 a:first-child {
+    padding-top: 0.625rem;
+  }
+}
+.footer-links1:hover, .footer-links2:hover {
+  color: hsl(136deg, 65%, 51%);
+}
+.footer-links2 {
+  grid-area: links2;
+}
+.footer-links2 a:first-child {
+  padding: 0.625rem 0;
+}
+.footer-links2 a:last-child {
+  padding-bottom: 1.875rem;
+}
+@media (min-width: 64em) {
+  .footer-links2 a:last-child {
+    padding-bottom: 0.625rem;
+  }
+}
+.footer-button {
+  grid-area: button;
+  justify-self: end;
+}
+.footer-copy {
+  grid-area: copyright;
+  justify-self: end;
+  align-self: end;
+  padding-top: 1.6875rem;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=style.css.map */

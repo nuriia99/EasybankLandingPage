@@ -42,6 +42,43 @@ a, a:visited, a:hover{
     }
 }
 
+//buttons
+
+a.cta{
+    display:inline-block;
+    &.hide-for-mobile{
+        @include breakpoint-down(medium){
+            display:none;
+        }
+    }
+    position: relative;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: $White;
+    padding: 0.875rem 2.1875rem;
+    border-radius: 3.125rem;
+    background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+    transition: opacity 300ms ease-in-out;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgb(255,255,255, 0.25);
+        border-radius: 3.125rem;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    &:hover::before{
+        opacity: 1;
+    }
+}
+
 //visibility
 .hide-for-mobile{
     @include breakpoint-down(medium){
@@ -91,5 +128,6 @@ p{
     line-height: 1.6;
     font-size: 1.125rem;
 }
+
 
 
