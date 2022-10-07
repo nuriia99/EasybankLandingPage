@@ -353,8 +353,8 @@ nav {
 .hero-image {
   position: relative;
   padding: 0;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -23px;
+  margin-right: -23px;
   min-height: 16.25rem;
   background-image: url("../../images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
