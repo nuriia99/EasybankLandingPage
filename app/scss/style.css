@@ -542,22 +542,10 @@ nav {
 }
 .articles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 255px);
+  grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
   -moz-column-gap: 1.875rem;
        column-gap: 1.875rem;
   row-gap: 1.25rem;
-}
-@media (max-width: 1286px) {
-  .articles-grid {
-    grid-template-columns: repeat(2, 255px);
-  }
-}
-@media (max-width: 615px) {
-  .articles-grid {
-    text-align: left;
-    grid-template-columns: auto;
-    justify-content: center;
-  }
 }
 .articles-grid-box {
   border-radius: 10px;
