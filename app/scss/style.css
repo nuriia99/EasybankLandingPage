@@ -471,15 +471,9 @@ nav {
 }
 @media (max-width: 615px) {
   .features .container {
-    text-align: left;
+    text-align: center;
     grid-template-columns: auto;
     justify-content: center;
-  }
-}
-@media (min-width: 500px) and (max-width: 615px) {
-  .features .container {
-    text-align: center;
-    padding-right: 3.75rem;
   }
 }
 @media (min-width: 64em) {
