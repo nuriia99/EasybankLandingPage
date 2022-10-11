@@ -2,18 +2,19 @@
     
     background-color: $LightGrayishBlue;
 
-    @include breakpoint-down(small){
-        h2{
-            padding-top: 3.75rem;
-        }
-    }
     
     .container{
         padding-bottom: 60px;
-        @include breakpoint-up(medium){
-            padding-top: 6.9375rem - 1.5rem;
+        padding-top: 6.9375rem - 1.5rem;
+        @include breakpoint-up(large){
+            
             text-align: left;
-            padding-right: 0;
+        }
+        @media(max-width: 615px){
+            text-align: left;
+            grid-template-columns: auto;
+            justify-content: center;
+            
         }
         @media(min-width:500px) and (max-width: 615px){
             text-align: center;
@@ -32,12 +33,15 @@
         &-box{
             padding-top: 1.875rem;
         }
-        @include breakpoint-up(medium){
-            display: grid;
-            grid-template-columns: repeat(auto-fit, 250px);
+        display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
             column-gap: 1.875rem;
-            @media(max-width: 1270px){
-                grid-template-columns: repeat(2, 250px);
+            @media(max-width: 1347px){
+                grid-template-columns:repeat(2, minmax(14.375rem, 1fr));
+            }
+            @media(max-width: 1024px){
+                grid-template-columns:repeat(2, minmax(14.375rem, 1fr));
+                justify-items: center;
             }
             @media(max-width: 615px){
                 grid-template-columns: auto;
@@ -52,7 +56,6 @@
                 }
                 
             }
-        }
         
     }
 

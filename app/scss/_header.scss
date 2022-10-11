@@ -97,19 +97,7 @@
 
         
     }
-    .cta{
-        cursor: pointer;
-        font-weight: 400;
-        font-size: 0.875rem;
-        color: $White;
-        padding: 0.875rem 2.1875rem;
-        border-radius: 3.125rem;
-        background: linear-gradient(to right, $LimeGreen, $BrightCyan);
-        transition: opacity 300ms ease-in-out;
-        &:hover{
-            opacity: 75%;
-        }
-    }
+    
 
     &-menu{
         z-index: 1;
@@ -126,6 +114,10 @@
             color: &darkblue;
             padding: 0.625rem;
             text-align: center;
+            transition: color 300ms ease-in-out;
+            &:hover{
+                color: $LimeGreen;
+            }
         }
     }
 

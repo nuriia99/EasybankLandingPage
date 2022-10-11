@@ -7,9 +7,8 @@
     
     .container{
         padding-bottom: 5rem;
-        @include breakpoint-up(medium){
+        @include breakpoint-up(large){
             text-align: left;
-            padding-right: 0;
         }
         @media(min-width:500px) and (max-width: 615px){
             text-align: center;
@@ -32,22 +31,22 @@
             grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
             column-gap: 1.875rem;
             row-gap: 1.25rem;
-            // @media(max-width: 1286px){
-            //     grid-template-columns: repeat(2, 255px);
-            // }
-            // @media(max-width: 615px){
-            //     text-align: left;
-            //     grid-template-columns: auto;
-            //     justify-content: center;
+            @media(max-width: 1347px){
+                grid-template-columns:repeat(2, minmax(14.375rem, 1fr));
+            }
+            @media(max-width: 615px){
+                text-align: left;
+                grid-template-columns: auto;
+                justify-content: center;
                 
-            // }
+            }
             &-box{
                 border-radius: 10px;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;                padding: 1.25rem;
                 padding-top: 0;
                 align-items: start;
+                height: 28.5625rem;
                 background-color: $White;
-                width: 255px;
                 p{
                     font-size: 0.9375rem;
                 }
@@ -55,17 +54,22 @@
                     font-size: 0.75rem;
                 }
                 h4{
-                    font-size: 18px;
+                    font-size: 1.125rem;
+                    transition: color 300ms ease-in-out;
+                    &:hover{
+                        color: $LimeGreen;
+                    }
                 }
                 img{
                     border-radius: 10px 10px 0 0;
                     margin: 0 -1.25rem;
                     height: 200px;
-                    width: 255px;
+                    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+                    width: -webkit-fill-available; 
                 }
-                // &:hover{
-                //     transform: scale(1.05);
-                // }
+                &:hover{
+                    transform: scale(1.05);
+                }
             }
         
     }

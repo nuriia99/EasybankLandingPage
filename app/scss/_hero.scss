@@ -19,8 +19,8 @@
     &-image{
         position: relative;
         padding: 0;
-        margin-left:-20px;
-        margin-right:-20px;
+        margin-left:-23px;
+        margin-right:-23px;
         min-height: 16.25rem;
         background-image: url("../../images/bg-intro-mobile.svg");
         background-repeat: no-repeat;
@@ -126,20 +126,7 @@
         .button{
             padding-top: 2.3125rem + 0.875rem;
             padding-bottom: 5rem + 0.875rem;
-            .cta{
-                border-top: 6.25rem;
-                cursor: pointer;
-                font-weight: 400;
-                font-size: 0.875rem;
-                color: $White;
-                padding: 0.875rem 2.1875rem;
-                border-radius: 3.125rem;
-                background: linear-gradient(to right, $LimeGreen, $BrightCyan);
-                transition: opacity 300ms ease-in-out;
-                &:hover{
-                    opacity: 75%;
-                }
-            }
+            
         }
         
         
